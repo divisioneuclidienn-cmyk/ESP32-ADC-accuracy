@@ -2,7 +2,7 @@
 ## 1
 
 * Ce projet a pour but de déterminer la fiabilité de l'ADC de mon ESP32.
-* Pour cela, j'ai réalisé une trentaine de mesures de tension depuis l'ESP que j'ai comparées à celles de mon voltmètre.
+* Pour cela, j'ai réalisé plusieurs mesures de tensions depuis l'ESP que j'ai comparées à celles de mon voltmètre.
 * Le code a été réalisé sur le framework officiel d'espressif esp-idf (https://www.espressif.com/en/products/sdks/esp-idf).
 * La suite sera d'essayer de corriger les défauts de mesures en calibrant l'ADC.
 
