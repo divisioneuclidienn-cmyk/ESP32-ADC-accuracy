@@ -13,9 +13,12 @@
 <img width="980" height="1080" alt="IMG_1510" src="https://github.com/user-attachments/assets/041f1bee-0a2b-491b-8e53-d92730defab4" />
 
 ## protocole
-* 2
-    test
+* Entre 0 et 2V :
+* Mesurer la tension depuis le voltmètre avec le calibre 2V entre GPIO_36 et GND.
+* Enlever le voltmètre
+* Mesurer le retour de l'ADC de l'ESP en nombres de points
 
+* \n
 
 ## résultats
 ## nuances / incertitudes / conclusion
