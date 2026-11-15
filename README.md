@@ -1,5 +1,3 @@
-<img width="3024" height="4032" alt="IMG_1510" src="https://github.com/user-attachments/assets/448141f7-6351-410f-83b5-a164a84124c8" />
-
 # Projet de mesure de fiabilité du CAN de l'ESP32
 ## 1
 
