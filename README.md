@@ -1,4 +1,4 @@
-Projet de mesure de linéarité du CAN d'un ESP32
+# Projet de mesure de linéarité du CAN d'un ESP32
 L'objectif était de mesurer la fiabilité du CAN de mon ESP32
 Code réaliser depuis le framework officiel d'espressif esp-idf (https://www.espressif.com/en/products/sdks/esp-idf)
 Pour cela, j'ai comparé une trentaine de mesures échantillonnées depuis l'ESP avec celle de mon multimètre : LIFEDOM MAS830B
@@ -16,5 +16,14 @@ Les mesures ont étaient faites aux bornes de la première résistance d'un pote
 Quand on tourne le potentiomètre, les résistances s'ajustent de la sorte à ce qu'aux extrémités du potentiomètre, soit R1 = 10kΩ et R2 = 0Ω ou à l'inverse R1 = 0Ω et R2 = 10kΩ.
 Voila le setup, on remarque des cables rigides car avec des cables longs et souples on capte trop de bruit (l'idéal étant des soudures).
 <img width="1558" height="985" alt="Courbe_ADC_moyenne_VS_ADC_parfait" src="https://github.com/user-attachments/assets/c490f2d1-caca-49ff-b1b8-b3cc69d368d1" />
+On observe un probleme de décalage entre l'ADC parfait et celui de l'ESP, la courbe me parait plutot linaire. Seulement il ne détecte pas correctement les tensions aux extrémités.
+Un calibrage pourrait corriger ce problème et le rendre plus précis.
+Je n'ai pas eu de souci particulier du au bruit électrique, en effet lors de mes mesures les écarts types sont restés relativement faibles ainsi que les pics d'amplitude.
 
-J'ai effectué 31 mesures, [Mesures.csv](https://github.com/user-attachments/files/34872257/Mesures.csv)
+
+J'ai effectué 31 mesures stockées dans un fichier csv : [Mesures.csv](https://github.com/user-attachments/files/34872257/Mesures.csv)
+J'ai par la suite effectué quelques calculs supplémentaires sur tableur comme les incertitudes de mesures de mon voltmètre pour en faire un graphique :
+<img width="1443" height="841" alt="Incertitudes_voltmetre" src="https://github.com/user-attachments/assets/be1e76da-e531-47a4-a99b-3673e37cd082" />
+On observe surtout l'écart de précision entre le calibre 2V et 20V.
+
+J'ai mesuré la tension de référence de mon ESP entre +3.3V et 0V/GND à 2,28V au voltmètre.
