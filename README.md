@@ -10,7 +10,7 @@
 * Les mesures de tensions sont effectuées sur GPIO_36 (pin "SP") aux bornes d'un potentiomètre ajustable.
 * Afin d'éviter le plus possible les erreurs de mesures de l'ESP dues aux IEM j'ai utilisé des câbles courts et rigides.
 * La référence du multimètre utilisé est : LIFEDOM MAS830B
-<img width="1024" height="600" alt="IMG_1510" src="https://github.com/user-attachments/assets/041f1bee-0a2b-491b-8e53-d92730defab4" />
+<img width="1920" height="1080" alt="IMG_1510" src="https://github.com/user-attachments/assets/041f1bee-0a2b-491b-8e53-d92730defab4" />
 
 ## protocole
 ## résultats
