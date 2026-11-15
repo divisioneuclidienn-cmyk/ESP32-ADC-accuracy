@@ -31,13 +31,24 @@ Enfin, on envoi tout ça sur le moniteur série, sans oublier de remettre l'enti
 * Mesurer le retour de l'ADC de l'ESP en nombres de points ainsi que les données statistiques calculées. 
 
 ## Résultats
+### Sans calibration
 Après une trentaine de mesures enregistrées dans un fichier csv [Mesures.csv](https://github.com/user-attachments/files/34872257/Mesures.csv)
-On peut tracer une courbe de linéarité pour vérifier la stabilité des mesures de l'ADC.
+On trace une courbe de linéarité pour vérifier la stabilité des mesures de l'ADC.
 <img width="1558" height="985" alt="Courbe_ADC_moyenne_VS_ADC_parfait" src="https://github.com/user-attachments/assets/c490f2d1-caca-49ff-b1b8-b3cc69d368d1" />
 On remarque un décalage des courbes indiquant que l'ADC de l'ESP n'est pour l'instant pas très fiable par rapport aux mesures de mon voltmètre.
 Ces décalages sont dues au fait que l'ADC ne détecte pas correctement les niveaux de tensions situés aux extrêmes.
 Cependant, on observe graphiquement que la linéarité reste correcte.
 Un calibrage pourrait donc aider à corriger ce problème et rendre l'ADC de l'ESP beaucoup plus fiable
+### Avec calibration
+L'ADC a été calibré avec le driver ADC_cali d'espressif.
+Il permet de se baser sur les infos internes de l'ADC pour déterminer ses tensions de références et de proposer une conversion plus fidèle de la tension.
+Après une quinzaine de mesures également enregistrées dans un fichier csv [Mesures_après_calibrage.csv](https://github.com/user-attachments/files/34879122/Mesures_apres_calibrage.csv)
+On peut tracer une courbe de la tension renvoyé par le mode de calibrage linéaire du driver en fonction de la tension réelle mesurée au voltmètre.
+<img width="1708" height="1055" alt="tension_ADC_VS_tension_voltmetre" src="https://github.com/user-attachments/assets/b7fad671-7cab-41cf-b58a-20f0100c009d" />
+On observe toujours les zones mortes de l'ADC aux extrémités des tensions qui ne peuvent pas être corrigées logiciellement.
+Cependant le problème de linéarité n'est plus présent lors du calcul de la tension.
+
+
 
 
 ## incertitudes de mesures
