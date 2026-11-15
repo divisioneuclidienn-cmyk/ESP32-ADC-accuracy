@@ -40,11 +40,10 @@ Cependant, on observe graphiquement que la linéarité reste correcte.
 Un calibrage pourrait donc aider à corriger ce problème et rendre l'ADC de l'ESP beaucoup plus fiable
 
 
-## incertitudes de mesures du voltmètre
-Mon voltmètre 
-
-J'ai par la suite effectué quelques calculs supplémentaires sur tableur comme les incertitudes de mesures de mon voltmètre pour en faire un graphique :
+## incertitudes de mesures
+Il faut prendre en compte certaines incertitudes lors de l'expérience.
+* Les mesures du voltmètres qui sont les références du jugement de la fiabilité de l'ADC de l'ESP
+En effet, passé le calibre 2V, mon voltmètre n'est plus assez précis pour réaliser une expérience fiable.
+Voilà un graphique montrant l'écart des incertitudes pour chaque mesures au voltmètre
 <img width="1443" height="841" alt="Incertitudes_voltmetre" src="https://github.com/user-attachments/assets/be1e76da-e531-47a4-a99b-3673e37cd082" />
-On observe surtout l'écart de précision entre le calibre 2V et 20V.
-
-J'ai mesuré la tension de référence de mon ESP entre +3.3V et 0V/GND à 2,28V au voltmètre.
+On observe principalement l'écart de la plage d'incertitudes entre le calibre 2V et 20V.
