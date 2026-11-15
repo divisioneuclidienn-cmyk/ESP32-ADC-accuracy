@@ -58,10 +58,3 @@ En effet, passé le calibre 2V, mon voltmètre n'est plus assez précis pour ré
 Voilà un graphique montrant l'écart des incertitudes pour chaque mesures au voltmètre
 <img width="1443" height="841" alt="Incertitudes_voltmetre" src="https://github.com/user-attachments/assets/be1e76da-e531-47a4-a99b-3673e37cd082" />
 On observe principalement l'écart de la plage d'incertitudes entre le calibre 2V et 20V.
-
-
-## Notes
-la linéarité de la courbe de l'ADC reste la même
-Simplement la linéarité de la courbe de la tension retourné par la fonction adc_cali_raw_to_voltage() est bonne car pour 0 elle donne le palier de tension ou l'ADC n'est plus aveugle.
-Problème pas vraiment réglé, car l'ADC reste aveugle dans ces zones.
-On étudie plus la fiabilité de l'ADC raw mais la fiabilité de la détermination de la tension grâce au mode de calibrage linéaire fournit par esp-idf
