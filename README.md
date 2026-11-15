@@ -38,7 +38,7 @@ On trace une courbe de linéarité pour vérifier la stabilité des mesures de l
 On remarque un décalage des courbes indiquant que l'ADC de l'ESP n'est pour l'instant pas très fiable par rapport aux mesures de mon voltmètre.
 Ces décalages sont dues au fait que l'ADC ne détecte pas correctement les niveaux de tensions situés aux extrêmes.
 Cependant, on observe graphiquement que la linéarité reste correcte.
-Un calibrage pourrait donc aider à corriger ce problème et rendre l'ADC de l'ESP beaucoup plus fiable.
+Un calibrage pourrait aider à corriger ce problème de désaxage.
 ### Avec calibration
 L'ADC a été calibré avec le driver ADC_cali d'espressif.
 Il permet de se baser sur les infos internes de l'ADC pour déterminer ses tensions de références et de proposer une conversion plus fidèle de la tension.
