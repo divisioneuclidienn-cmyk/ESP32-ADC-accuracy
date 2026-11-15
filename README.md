@@ -1,3 +1,5 @@
+<img width="3024" height="4032" alt="IMG_1510" src="https://github.com/user-attachments/assets/448141f7-6351-410f-83b5-a164a84124c8" />
+
 # Projet de mesure de fiabilité du CAN de l'ESP32
 ## 1
 
@@ -6,12 +8,16 @@
 * Le code a été réalisé sur le framework officiel d'espressif esp-idf (https://www.espressif.com/en/products/sdks/esp-idf).
 * La suite sera d'essayer de corriger les défauts de mesures en calibrant l'ADC.
 
-## 2
-Les mesures de tensions sont effectuées sur GPIO_36 (pin "SP") aux bornes d'un potentiomètre ajustable.
-Afin d'éviter le plus possible les erreurs de mesures de l'ESP dues aux IEM j'ai utilisé des câbles courts et rigides.
-<img width="1558" height="985" alt="Courbe_ADC_moyenne_VS_ADC_parfait" src="https://github.com/user-attachments/assets/c490f2d1-caca-49ff-b1b8-b3cc69d368d1" />
+## Le matériel
+* Les mesures de tensions sont effectuées sur GPIO_36 (pin "SP") aux bornes d'un potentiomètre ajustable.
+* Afin d'éviter le plus possible les erreurs de mesures de l'ESP dues aux IEM j'ai utilisé des câbles courts et rigides.
+* La référence du multimètre utilisé est : LIFEDOM MAS830B
+<img width="3024" height="4032" alt="IMG_1510" src="https://github.com/user-attachments/assets/041f1bee-0a2b-491b-8e53-d92730defab4" />
 
-Code réaliser depuis le framework officiel d'espressif esp-idf (https://www.espressif.com/en/products/sdks/esp-idf)
+## protocole
+## résultats
+## nuances / incertitudes / conclusion
+
 Pour cela, j'ai comparé une trentaine de mesures échantillonnées depuis l'ESP avec celle de mon multimètre : LIFEDOM MAS830B
 -Les mesures de l'ESP étaient traitées comme suivant : 
 Voltmètre débranché pour éviter toute variation de courant pouvant interagir avec la tension.
