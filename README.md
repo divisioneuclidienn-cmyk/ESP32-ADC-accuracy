@@ -1,4 +1,4 @@
-# Projet de mesure de fiabilité du CAN de l'ESP32
+# Projet de mesure des limitations du CAN de l'ESP32
 
 ## introduction
 * Ce projet a pour but de déterminer la fiabilité de l'ADC de mon ESP32
