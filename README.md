@@ -1,5 +1,15 @@
 # Projet de mesure de fiabilité du CAN de l'ESP32
-## Mesures de tension, programmation et calculs statistiques
+## 1
+
+Ce projet a pour but de déterminer la fiabilité de l'ADC de mon ESP32.
+Pour cela, j'ai réalisé une trentaine de mesures de tension depuis l'ESP que j'ai comparés avec mon voltmètre.
+Le code a été réalisé sur le framework officiel d'espressif esp-idf (https://www.espressif.com/en/products/sdks/esp-idf).
+La suite sera d'essayer de corriger les défauts de mesures en calibrant l'ADC.
+
+## 2
+Les mesures de tensions sont effectuées sur GPIO_36 (pin "SP") aux bornes d'un potentiomètre ajustable.
+Afin d'éviter le plus possible les erreurs de mesures de l'ESP dues aux IEM j'ai utilisé des câbles courts et rigides.
+<img width="1558" height="985" alt="Courbe_ADC_moyenne_VS_ADC_parfait" src="https://github.com/user-attachments/assets/c490f2d1-caca-49ff-b1b8-b3cc69d368d1" />
 
 Code réaliser depuis le framework officiel d'espressif esp-idf (https://www.espressif.com/en/products/sdks/esp-idf)
 Pour cela, j'ai comparé une trentaine de mesures échantillonnées depuis l'ESP avec celle de mon multimètre : LIFEDOM MAS830B
