@@ -12,6 +12,10 @@ Enfin, remise à 0 de l'entièreté des valeurs du tableau grâce à la fonction
 Dans la plage la plus précise du voltmètre lors de l'expérience soit de 0 à 2V (3 décimales)
 Puis passé 2V, avec le calibre 20V du voltmètre soit de 2 à 3,28V (2 décimales)
 
+
+* test
+* test
+
 Les mesures ont étaient faites aux bornes de la première résistance d'un potentiomètre contenant 2 résistances internes, la somme de ses 2 résistances est toujours égale à 10kΩ.
 Quand on tourne le potentiomètre, les résistances s'ajustent de la sorte à ce qu'aux extrémités du potentiomètre, soit R1 = 10kΩ et R2 = 0Ω ou à l'inverse R1 = 0Ω et R2 = 10kΩ.
 Voila le setup, on remarque des cables rigides car avec des cables longs et souples on capte trop de bruit (l'idéal étant des soudures).
