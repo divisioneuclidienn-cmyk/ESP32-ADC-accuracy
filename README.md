@@ -1,5 +1,6 @@
-# Projet de mesure de linéarité du CAN d'un ESP32
-## L'objectif était de mesurer la fiabilité du CAN de mon ESP32
+# Projet de mesure de fiabilité du CAN de l'ESP32
+## Mesures de tension, programmation et calculs statistiques
+
 Code réaliser depuis le framework officiel d'espressif esp-idf (https://www.espressif.com/en/products/sdks/esp-idf)
 Pour cela, j'ai comparé une trentaine de mesures échantillonnées depuis l'ESP avec celle de mon multimètre : LIFEDOM MAS830B
 -Les mesures de l'ESP étaient traitées comme suivant : 
