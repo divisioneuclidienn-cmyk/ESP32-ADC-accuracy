@@ -12,6 +12,13 @@
 * La référence du multimètre utilisé est : LIFEDOM MAS830B
 <img width="980" height="1080" alt="IMG_1510" src="https://github.com/user-attachments/assets/041f1bee-0a2b-491b-8e53-d92730defab4" />
 
+## Le fonctionnement du code
+* Le code renvoi sur le moniteur série les résultats statistiques d'une série de 10000 mesures consécutives.
+Premièremement on initialise l'ADC ainsi que le canal qui correspond au gpio (ici gpio_36 soit ADC1_CHANNEL0).
+Dans la boucle du firmware on effectue 10000 mesures analogiques de tensions sur GPIO_36, en stockant chacune des valeurs dans un tableau d'effectif.
+Une fois le tableau remplit, on effectue des calculs mathématiques simples de statistiques pour déterminer la moyenne de la série, son amplitude, sa variance pour connaitre son écart-type.
+Enfin, on envoi tout ça sur le moniteur série, sans oublier de remettre l'entièreté des valeurs du tableau à 0.
+
 ## Protocole
 * Entre 0 et 2V :
 * Mesurer la tension depuis le voltmètre avec le calibre 2V entre GPIO_36 et GND.
@@ -33,30 +40,8 @@ Cependant, on observe graphiquement que la linéarité reste correcte.
 Un calibrage pourrait donc aider à corriger ce problème et rendre l'ADC de l'ESP beaucoup plus fiable
 
 
-
-## nuances / incertitudes / conclusion
-
-Pour cela, j'ai comparé une trentaine de mesures échantillonnées depuis l'ESP avec celle de mon multimètre : LIFEDOM MAS830B
--Les mesures de l'ESP étaient traitées comme suivant : 
-Voltmètre débranché pour éviter toute variation de courant pouvant interagir avec la tension.
-10000 mesures analogiques depuis l'ADC_1 configuré en mode oneshot sur GPIO_36 avec un intervalle de 100us entre chaque mesures pour éviter la sur utilisation de l'ADC
-Chaque mesures étaient stockées dans un tableau d'entiers décrivant l'effectif pour chacune des 4096 valeurs possibles (la résolution du CAN définit sur 12bit).
-Une fois le tableau rempli. La fonction sample_data() effectue des calculs mathématiques simples pour déterminer la moyenne des valeurs, l'amplitude, la variance (étant le carré de l'écart-type) et l'écart-type permettant de juger de la fiabilité d'une mesure complète.
-Enfin, remise à 0 de l'entièreté des valeurs du tableau grâce à la fonction memset().
--les mesures effectuées au voltmètre se déroulaient comme suivant :
-Dans la plage la plus précise du voltmètre lors de l'expérience soit de 0 à 2V (3 décimales)
-Puis passé 2V, avec le calibre 20V du voltmètre soit de 2 à 3,28V (2 décimales)
-
-
-* test
-* test
-
-Les mesures ont étaient faites aux bornes de la première résistance d'un potentiomètre contenant 2 résistances internes, la somme de ses 2 résistances est toujours égale à 10kΩ.
-Quand on tourne le potentiomètre, les résistances s'ajustent de la sorte à ce qu'aux extrémités du potentiomètre, soit R1 = 10kΩ et R2 = 0Ω ou à l'inverse R1 = 0Ω et R2 = 10kΩ.
-Voila le setup, on remarque des cables rigides car avec des cables longs et souples on capte trop de bruit (l'idéal étant des soudures).
-On observe un probleme de décalage entre l'ADC parfait et celui de l'ESP, la courbe me parait plutot linaire. Seulement il ne détecte pas correctement les tensions aux extrémités.
-Un calibrage pourrait corriger ce problème et le rendre plus précis.
-Je n'ai pas eu de souci particulier du au bruit électrique, en effet lors de mes mesures les écarts types sont restés relativement faibles ainsi que les pics d'amplitude.
+## incertitudes de mesures du voltmètre
+Mon voltmètre 
 
 J'ai par la suite effectué quelques calculs supplémentaires sur tableur comme les incertitudes de mesures de mon voltmètre pour en faire un graphique :
 <img width="1443" height="841" alt="Incertitudes_voltmetre" src="https://github.com/user-attachments/assets/be1e76da-e531-47a4-a99b-3673e37cd082" />
