@@ -39,7 +39,7 @@ On trace la courbe de la tension renvoyé par le mode de calibrage linéaire du 
 <img width="1708" height="1055" alt="tension_ADC_VS_tension_voltmetre" src="https://github.com/user-attachments/assets/b7fad671-7cab-41cf-b58a-20f0100c009d" />
 On observe toujours les zones mortes de l'ADC aux extrémités des tensions qui ne peuvent pas être corrigées logiciellement.
 La linéarité de la tension relevée est correcte.
-//Montrer que les les valeurs renvoyées rentre dans les approximations de mesures du voltmètre
+Les tensions obtenues (sauf dans les zones mortes) sont plutôt fidèle car elles rentrent dans l'intervalle d'incertitude de mon voltmètre.
 
 ## Limitations de l'expérience
 Il faut prendre en compte certaines incertitudes lors de l'expérience.
