@@ -2,9 +2,9 @@
 
 ## introduction
 * Ce projet a pour but de déterminer la fiabilité de l'ADC de mon ESP32
-* Pour cela, j'ai réalisé plusieurs mesures de tensions depuis l'ESP que j'ai comparées à celles de mon voltmètre
+* Pour cela, j'ai comparé des mesures de tension analogique depuis l'ESP à celles de mon voltmètre
 * Le code a été réalisé sur le framework officiel d'espressif esp-idf ([ESP-IDF](https://www.espressif.com))
-* La suite sera d'essayer de corriger les défauts de mesures en calibrant l'ADC
+* La suite sera d'essayer de corriger les défauts de ces mesures
 
 ## Le matériel
 * Les mesures de tensions de l'ESP sont effectuées sur GPIO_36 (pin "SP") depuis l'ADC1 en mode one shot avec atténuation de 12dB aux bornes d'un potentiomètre ajustable
@@ -21,12 +21,7 @@ Enfin, on envoi tout ça sur le moniteur série, sans oublier de remettre l'enti
 
 ## Protocole
 * Entre 0 et 2V :
-* Mesurer la tension depuis le voltmètre avec le calibre 2V entre GPIO_36 et GND
-* Enlever le voltmètre
-* Mesurer le retour de l'ADC de l'ESP en nombres de points ainsi que les données statistiques calculées
-
-* Entre 2 et 3.28V :
-* Mesurer la tension depuis le voltmètre avec le calibre 20V (moins précis) entre GPIO_36 et GND
+* Mesurer la tension depuis le voltmètre avec le calibre 2V puis 20V (moins précis) entre GPIO_36 et GND
 * Enlever le voltmètre
 * Mesurer le retour de l'ADC de l'ESP en nombres de points ainsi que les données statistiques calculées
 
