@@ -51,7 +51,7 @@ Cependant le problème de linéarité n'est plus présent lors du calcul de la t
 
 
 
-## incertitudes de mesures
+## Limitations de l'expérience
 Il faut prendre en compte certaines incertitudes lors de l'expérience.
 * Les mesures du voltmètres qui sont les références du jugement de la fiabilité de l'ADC de l'ESP.
 En effet, passé le calibre 2V, mon voltmètre n'est plus assez précis pour réaliser une expérience fiable.
