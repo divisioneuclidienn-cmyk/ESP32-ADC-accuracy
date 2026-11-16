@@ -46,7 +46,8 @@ Après une quinzaine de mesures également enregistrées dans un fichier csv [Me
 On peut tracer une courbe de la tension renvoyé par le mode de calibrage linéaire du driver en fonction de la tension réelle mesurée au voltmètre.
 <img width="1708" height="1055" alt="tension_ADC_VS_tension_voltmetre" src="https://github.com/user-attachments/assets/b7fad671-7cab-41cf-b58a-20f0100c009d" />
 On observe toujours les zones mortes de l'ADC aux extrémités des tensions qui ne peuvent pas être corrigées logiciellement.
-Cependant le problème de linéarité n'est plus présent lors du calcul de la tension.
+La linéarité de la tension relevé est bonne.
+//Montrer que les les valeurs renvoyées rentre dans les approximations de mesures du voltmètre
 
 
 
