@@ -1,0 +1,7 @@
+.venv
+.vscode
+main/src/notes.txt
+Notes.txt
+sdkconfig
+sdkconfig.old
+build/
