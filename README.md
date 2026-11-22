@@ -16,6 +16,7 @@ Le montage sur breadboard :
 ### Mesures
 ### Acquisition
 ### Protocole
+(dépendances python)
 
 ## Limitations de l'ADC brut
 ### Linéarité et zones mortes
