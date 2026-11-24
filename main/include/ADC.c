@@ -7,23 +7,23 @@
 void init_ADC(adc_oneshot_unit_handle_t * adc_handle, adc_cali_handle_t * calibration_handle){
   // setup de l'ADCx
   adc_oneshot_unit_init_cfg_t init_config1 = {
-    .unit_id = ADC_UNIT_1, // ADC1
-    .ulp_mode = ADC_ULP_MODE_DISABLE // UltraLowPower mode
+    .unit_id = ADC_UNIT, // ADC1
+    .ulp_mode = ADC_ULP_MODE // UltraLowPower mode
   };
   ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config1, adc_handle));
   
   // Setup de l'ADCx_y (channel de l'ADC)
   adc_oneshot_chan_cfg_t config = {
-    .bitwidth = ADC_BITWIDTH_12,
-    .atten = ADC_ATTEN_DB_12
+    .bitwidth = ADC_BITWIDTH,
+    .atten = ADC_ATTEN
   };
   ESP_ERROR_CHECK(adc_oneshot_config_channel(*adc_handle, ADC_CHANNEL_0, &config));
 
 
   adc_cali_line_fitting_config_t calibration_config = {
-    .unit_id = ADC_UNIT_1,
-    .bitwidth = ADC_BITWIDTH_12,
-    .atten = ADC_ATTEN_DB_12
+    .unit_id = ADC_UNIT,
+    .bitwidth = ADC_BITWIDTH,
+    .atten = ADC_ATTEN
   };
   ESP_ERROR_CHECK(adc_cali_create_scheme_line_fitting(&calibration_config, calibration_handle));
 }

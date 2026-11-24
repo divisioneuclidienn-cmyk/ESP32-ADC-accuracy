@@ -4,10 +4,15 @@
 #include "esp_adc/adc_oneshot.h"
 #include "hal/adc_types.h"
 
-#define ADC_BITWIDTH 4096
-#define CURRENT_ADC_MAX 4095
-#define CURRENT_ADC_MIN 0
-#define MEASURES_NB 1024
+#define ADC_BITWIDTH (4096)
+#define CURRENT_ADC_MAX (4095)
+#define CURRENT_ADC_MIN (0)
+#define MEASURES_NB (1024)
+
+#define ADC_UNIT          ADC_UNIT_1
+#define ADC_ULP_MODE      ADC_ULP_MODE_DISABLE
+#define ADC_BITWIDTH      ADC_BITWIDTH_12
+#define ADC_ATTEN         ADC_ATTEN_DB_12
 
 typedef struct {
   float average;
