@@ -1,7 +1,7 @@
-# Etude des limitations de l'ADC de l'ESP32 + acquisition de données
+# Etude de l'ADC de l'ESP32 + acquisition de données
 
 ## Introduction
-* Ce projet a pour but de déterminer la fiabilité de l'ADC de l'ESP32 et d'étudier des méthodes de filtrages simples
+* Ce projet a pour but d'étudier la fiabilité de l'ADC de l'ESP32 et des méthodes de filtrages simples
 * Le code a été réalisé sur le framework officiel d'espressif esp-idf ([ESP-IDF](https://www.espressif.com))
 
 ## Le matériel
